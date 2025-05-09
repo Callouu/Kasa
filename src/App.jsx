@@ -1,12 +1,12 @@
-import { useState } from 'react'
 import React from 'react';
-import AllRoutes from "./Routes/Routes";
+import AllRoutes from "../src/routes/Routes";
 
 function App() {
-
-  return (
-    <AllRoutes />
-  )
+    return (
+        <div className="App">
+            <AllRoutes/>
+        </div>
+    );
 }
 
-export default App
+export default App;
