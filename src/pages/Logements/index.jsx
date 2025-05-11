@@ -9,7 +9,7 @@ import Rating from '../../components/Rating'
 
 function Rental() {
   const { rentalId } = useParams()
-  const rental = rentalList.find((i) => i.id === rentalId)
+  const rental = rentalList.find((index) => index.id === rentalId)
 
   if (!rental) {
     return <Navigate to="/adresse-introuvable" />
