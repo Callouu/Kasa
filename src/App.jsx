@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Error from './components/Error'
 import Home from './pages/Home'
 import AboutKasa from './pages/About'
+import Rental from './pages/Logements'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route path="/logement/:rentalId" element={<Rental />} />
           <Route path="/a-propos" element={<AboutKasa />} />
           <Route path="/adresse-introuvable" element={<Error />} />
           <Route path="*" element={<Navigate to="/adresse-introuvable" replace />}
