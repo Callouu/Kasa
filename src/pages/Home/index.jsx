@@ -1,8 +1,28 @@
-import React from 'react'
+
+import homeBanner from '../../assets/banner_home.png'
+import rentalList from '../../data/logements.json'
+import Card from '../../components/Card'
+import Banner from '../../components/Banner' 
+import { Link } from 'react-router' 
 
 function Home() {
   return (
-    <div><h1>TEST</h1></div>
+    <div>
+      <Banner
+        picture={homeBanner}
+        title="Chez vous, partout et ailleurs"
+        className="banner"
+      />
+      <section className="rental-section">
+        <div className="rental-section__cards-container">
+          {rentalList.map((rental) => (
+            <Link to={`/logement/${rental.id}`} key={rental.id}>
+              <Card picture={rental.cover} title={rental.title} />
+            </Link>
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
 
