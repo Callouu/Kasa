@@ -31,7 +31,7 @@ function AboutKasa() {
       <Banner
         picture={aboutBanner}
         title=""
-        className="banner banner--higher"
+        className="banner banner--about"
       />
       <section className="kasa-values">
         {values.map((item) => (
