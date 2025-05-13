@@ -21,6 +21,42 @@ ul, li {
   text-decoration: underline;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  margin: 50px auto;
+}
+@media all and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    margin: 20px auto;
+  }
+}
+.header__logo {
+  height: 68px;
+}
+@media all and (max-width: 768px) {
+  .header__logo {
+    height: 47px;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  font-size: 24px;
+  font-weight: 500;
+}
+@media all and (max-width: 768px) {
+  .header__nav {
+    font-size: 12px;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;

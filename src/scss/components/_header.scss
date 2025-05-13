@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+    margin: 50px auto;
+    @include mobile-responsive {
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    &__logo{
+        height: 68px;
+        @include mobile-responsive {
+            height: 47px;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 50px;
+        font-size: 24px;
+        font-weight: map-get($font-weight, regular);
+        @include mobile-responsive {
+            font-size: 12px;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+    }
+}
