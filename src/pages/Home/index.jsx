@@ -13,8 +13,8 @@ function Home() {
         title="Chez vous, partout et ailleurs"
         className="banner"
       />
-      <section className="rental-section">
-        <div className="rental-section__cards-container">
+      <section className="cards-section">
+        <div className="cards-section__cards-container">
           {rentalList.map((rental) => (
             <Link to={`/logement/${rental.id}`} key={rental.id}>
               <Card picture={rental.cover} title={rental.title} />

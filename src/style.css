@@ -5,7 +5,6 @@
 }
 
 body {
-  max-width: 1440px;
   margin: auto;
 }
 
@@ -57,12 +56,18 @@ ul, li {
   }
 }
 
+.header a {
+  color: #000000;
+  font-weight: 400;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #000000;
   margin-top: 50px;
+  height: 209px;
 }
 .footer__logo {
   width: 122px;
@@ -149,6 +154,94 @@ ul, li {
   .banner__title {
     text-align: center;
     margin: 30px auto;
+  }
+}
+
+.card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 200ms ease-in-out;
+}
+@media all and (max-width: 768px) {
+  .card {
+    height: 255px;
+    width: 100%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 260px;
+    height: 260px;
+  }
+}
+.card:hover::before {
+  content: "";
+  background-color: rgb(70.5, 0, 0);
+  opacity: 40%;
+}
+.card::before {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__title {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  padding: 5%;
+  margin: 0;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cards-section {
+  width: 86%;
+  margin: auto;
+  background-color: #F6F6F6;
+  padding: 60px 50px;
+  border-radius: 25px;
+}
+@media all and (max-width: 768px) {
+  .cards-section {
+    background-color: white;
+    padding: 20px 0px;
+  }
+}
+.cards-section__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+@media all and (max-width: 768px) {
+  .cards-section__cards-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .cards-section__cards-container {
+    gap: 40px;
   }
 }
 

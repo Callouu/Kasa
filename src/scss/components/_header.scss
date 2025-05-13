@@ -27,3 +27,8 @@
         }
     }
 }
+
+.header a {
+    color: $color-black;
+    font-weight: map-get($font-weight, light);
+}
