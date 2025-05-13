@@ -1,0 +1,11 @@
+@mixin mobile-responsive {
+    @media all and (max-width: map-get($breakpoints, smartphone)) {
+        @content;
+    }
+}
+
+@mixin tablet-responsive {
+    @media all and (min-width: map-get($breakpoints, smartphone)) and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}

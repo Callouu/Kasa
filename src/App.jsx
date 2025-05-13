@@ -7,6 +7,8 @@ import Error from './components/Error'
 import Home from './pages/Home'
 import AboutKasa from './pages/About'
 import Rental from './pages/Logements'
+import './style.css'
+
 
 
 function App() {

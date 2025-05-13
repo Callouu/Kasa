@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["scss/utils/_base.scss","scss/utils/_variables.scss","scss/components/_footer.scss","scss/utils/_mixins.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA,OCHiB;;;ADMrB;EACI;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AEpBJ;EACI;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;;AAEJ;EACI;EACA;EACA;;ACZJ;EDSA;IAKQ;;;ACRR;EDGA;IAQQ","file":"style.css"}
