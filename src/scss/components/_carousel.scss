@@ -1,0 +1,75 @@
+.carousel {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    @include rounded-corner-high;
+
+    @include mobile-responsive {
+        height: 255px;
+        @include rounded-corner-high;
+    }
+
+    @include tablet-responsive {
+        height: 330px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        transition: transform 0.5s;
+        will-change: transform;
+
+        &--pictures {
+            height: 415px;
+            max-height: 415px;
+            width: 100%;
+            min-width: 100%;
+            object-fit: cover;
+
+            @include mobile-responsive {
+                height: 255px;
+                max-height: 255px;
+            }
+
+            @include tablet-responsive {
+                height: 330px;
+                max-height: 330px;
+            }
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+
+        &--buttons {
+            border: none;
+            background-color: transparent;
+        }
+
+        &--number {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+            bottom: 2%;
+            right: 50%;
+            margin: 0;
+
+            @include mobile-responsive {
+                display: none;
+            }
+
+            @include tablet-responsive {
+                font-size: 14px;
+            }
+        }
+    }
+}
