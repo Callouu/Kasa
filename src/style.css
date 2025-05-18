@@ -308,8 +308,8 @@ ul, li {
 }
 
 .collapse {
-  border-radius: 5px;
   margin-bottom: 3%;
+  border-radius: 5px;
 }
 .collapse--small {
   width: 45%;
@@ -335,6 +335,7 @@ ul, li {
   border: none;
   padding: 2%;
   transition: background-color 200ms ease-in-out;
+  cursor: pointer;
   border-radius: 5px;
 }
 @media all and (max-width: 768px) {
@@ -361,12 +362,21 @@ ul, li {
   font-size: 24px;
   font-weight: 400;
   background-color: #F6F6F6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
   border-radius: 5px;
 }
 @media all and (max-width: 768px) {
   .collapse__text {
     font-size: 12px;
   }
+}
+.collapse__text.open {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
 }
 
 .expand_icon {
@@ -432,6 +442,53 @@ ul, li {
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .error__redirect {
     font-size: 16px;
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+}
+.rating__stars {
+  width: 36px;
+  height: 36px;
+}
+@media all and (max-width: 768px) {
+  .rating__stars {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0px;
+  margin: 20px 0;
+}
+@media all and (max-width: 768px) {
+  .tags {
+    margin: 15px 0;
+  }
+}
+.tags__text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #FF6060;
+  height: 25px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px 15px;
+  border-radius: 10px;
+}
+@media all and (max-width: 768px) {
+  .tags__text {
+    height: 18px;
+    font-size: 10px;
   }
 }
 

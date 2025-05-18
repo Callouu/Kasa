@@ -1,0 +1,31 @@
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px;
+    margin: 20px 0;
+
+    @include mobile-responsive {
+        margin: 15px 0;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: $color-primary;
+        height: 25px;
+        color: white;
+        font-size: 14px;
+        font-weight: map-get($font-weight, regular);
+        padding: 0px 15px;
+
+        @include rounded-corner-mid;
+
+        @include mobile-responsive {
+            height: 18px;
+            font-size: 10px;
+        }
+    }
+}
