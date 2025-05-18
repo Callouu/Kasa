@@ -5,18 +5,18 @@ import orangeStar from "../../assets/rate_star_active.svg";
 function Rating({ rating }) {
   const range = [1, 2, 3, 4, 5];
   return (
-    <div className="rating-container">
+    <div className="rating">
       {range.map((rangeElem) =>
         rating >= rangeElem ? (
           <img
-            className="rating-container__stars"
+            className="rating__stars"
             src={orangeStar}
             alt=""
             key={rangeElem.toString()}
           />
         ) : (
           <img
-            className="rating-container__stars"
+            className="rating__stars"
             src={greyStar}
             alt=""
             key={rangeElem.toString()}
