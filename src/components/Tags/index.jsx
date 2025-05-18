@@ -1,6 +1,5 @@
-import React from 'react'
+import React from "react";
 
-//Component
 function Tags({ tag }) {
   return (
     <div>
@@ -12,7 +11,7 @@ function Tags({ tag }) {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
-export default Tags
+export default Tags;

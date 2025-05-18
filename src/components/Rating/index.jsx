@@ -1,12 +1,9 @@
-import React from 'react'
+import React from "react";
+import greyStar from "../../assets/rate_star.svg";
+import orangeStar from "../../assets/rate_star_active.svg";
 
-//Import images
-import greyStar from '../../assets/rate_star.svg'
-import orangeStar from '../../assets/rate_star_active.svg'
-
-//Component
 function Rating({ rating }) {
-  const range = [1, 2, 3, 4, 5]
+  const range = [1, 2, 3, 4, 5];
   return (
     <div className="rating-container">
       {range.map((rangeElem) =>
@@ -27,7 +24,7 @@ function Rating({ rating }) {
         )
       )}
     </div>
-  )
+  );
 }
 
-export default Rating
+export default Rating;
