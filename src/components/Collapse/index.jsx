@@ -16,7 +16,7 @@ function Collapse({ title, text, className }) {
           alt="Cliquez-ici pour dérouler le texte"
         />
       </button>
-      {open && <div className="collapse__text">{text}</div>}
+      {open && <div className={`collapse__text${open ? " open" : ""}`}>{text}</div>}
     </div>
   );
 }
