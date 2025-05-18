@@ -33,7 +33,7 @@ function AboutKasa() {
         title=""
         className="banner banner--about"
       />
-      <section className="kasa-values">
+      <section className="values">
         {values.map((item) => (
           <Collapse
             key={item.title}

@@ -1,0 +1,7 @@
+.values {
+    width: 71%;
+    margin: auto;
+    @include mobile-responsive {
+        width: 86%;
+    }
+}
