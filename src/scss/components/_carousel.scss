@@ -73,3 +73,19 @@
         }
     }
 }
+
+.arrow {
+    height: 80px;
+
+    @include mobile-responsive {
+        height: 24px;
+    }
+
+    @include tablet-responsive {
+        height: 56px;
+    }
+
+    &--backward {
+        transform: rotate(-180deg);
+    }
+}
