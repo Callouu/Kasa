@@ -1,6 +1,6 @@
 import React from "react";
-import greyStar from "../../assets/rate_star.svg";
-import orangeStar from "../../assets/rate_star_active.svg";
+import greyStar from "../../assets/star-inactive.svg";
+import orangeStar from "../../assets/star-active.svg";
 
 function Rating({ rating }) {
   const range = [1, 2, 3, 4, 5];
