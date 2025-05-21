@@ -13,7 +13,7 @@ import './style.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Kasa">
       <Header />
       <main>
         <Routes>
