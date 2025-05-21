@@ -20,14 +20,13 @@ function Carousel({ slides }) {
   const previousSlide = () => !isTransitioning && goToSlide(currentSlide - 1);
   const nextSlide = () => !isTransitioning && goToSlide(currentSlide + 1);
 
-  // Quand la transition se termine, on saute sans animation si on est sur une image dupliquée
+  // Quand la transition se termine, on saute sans animation sur la vraie première / dernière image
   const handleTransitionEnd = () => {
     setIsTransitioning(false);
     if (currentSlide === 0) {
       setCurrentSlide(length);
       containerRef.current.style.transition = "none";
       containerRef.current.style.transform = `translateX(${-length * 100}%)`;
-      // Force le repaint pour réactiver la transition
       setTimeout(() => {
         containerRef.current.style.transition = "";
       }, 20);

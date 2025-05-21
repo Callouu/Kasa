@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
 import Home from './pages/Home'
-import AboutKasa from './pages/About'
+import About from './pages/About'
 import Rental from './pages/Logements'
 import './style.css'
 
