@@ -25,6 +25,7 @@
     }
     &__location {
         font-size: 18px;
+        color: $color-black;
         margin: 0;
         font-weight: map-get($font-weight, regular);
         @include mobile-responsive {

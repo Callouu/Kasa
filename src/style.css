@@ -361,9 +361,10 @@ ul, li {
 .collapse__text {
   width: 100%;
   padding: 5% 3%;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   background-color: #F6F6F6;
+  color: #000000;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -393,6 +394,10 @@ ul, li {
 .expand_icon--open {
   transform: rotate(-180deg);
   transition: transform 200ms ease-in-out;
+}
+
+.collapse li {
+  color: #000000;
 }
 
 .error {
@@ -436,7 +441,7 @@ ul, li {
 }
 .error__redirect {
   font-size: 18px;
-  color: black;
+  color: #000000;
 }
 @media all and (max-width: 768px) {
   .error__redirect {
@@ -569,6 +574,7 @@ ul, li {
 }
 .rental-info__location {
   font-size: 18px;
+  color: #000000;
   margin: 0;
   font-weight: 500;
 }

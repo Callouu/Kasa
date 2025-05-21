@@ -37,7 +37,7 @@
 
     &__redirect {
         font-size: 18px;
-        color: black;
+        color: $color-black;
 
         @include mobile-responsive {
             font-size: 14px;

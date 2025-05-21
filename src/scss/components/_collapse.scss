@@ -51,9 +51,10 @@
     &__text {
         width: 100%;
         padding: 5% 3%;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: map-get($font-weight, light);
         background-color: $background-color;
+        color: $color-black;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
@@ -84,4 +85,8 @@
         transform: rotate(-180deg);
         transition: transform 200ms ease-in-out;
     }
+}
+
+.collapse li {
+    color: $color-black;
 }
