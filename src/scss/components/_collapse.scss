@@ -1,6 +1,6 @@
 .collapse {
     margin-bottom: 3%;
-    @include rounded-corner-small;
+    @include border-radius-small;
 
     &--small {
         width: 45%;
@@ -26,7 +26,7 @@
         padding: 2%;
         transition: background-color 200ms ease-in-out;
         cursor: pointer;
-        @include rounded-corner-small;
+        @include border-radius-small;
 
         @include mobile-responsive {
             height: 30px;
@@ -59,7 +59,7 @@
         overflow: hidden;
         opacity: 0;
         transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
-        @include rounded-corner-small;
+        @include border-radius-small;
 
         @include mobile-responsive {
             font-size: 12px;

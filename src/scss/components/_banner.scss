@@ -7,12 +7,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    @include rounded-corner-high;
+    @include border-radius-high;
     @include mobile-responsive {
         justify-content: flex-start;
         height: 111px;
         margin: 20px auto;
-        @include rounded-corner-mid;
+        @include border-radius-mid;
     }
     @include tablet-responsive {
         margin: 40px auto;

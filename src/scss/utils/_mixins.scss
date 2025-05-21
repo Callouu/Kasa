@@ -17,14 +17,14 @@
 }
 
 // Border Radius
-@mixin rounded-corner-high{
+@mixin border-radius-high{
     border-radius: 25px;
 }
 
-@mixin rounded-corner-mid {
+@mixin rborder-radius-mid {
     border-radius: 10px;
 }
 
-@mixin rounded-corner-small {
+@mixin border-radius-small {
     border-radius: 5px;
 }

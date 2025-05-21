@@ -3,7 +3,7 @@
     width: 340px;
     height: 340px;
     background-color: $color-primary;
-    @include rounded-corner-mid;
+    @include border-radius-mid;
     overflow: hidden;
     transition: box-shadow 200ms ease-in-out;
     @include mobile-responsive {

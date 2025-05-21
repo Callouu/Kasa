@@ -3,7 +3,7 @@
     margin: auto;
     background-color: $background-color;
     padding: 60px 50px;
-    @include rounded-corner-high;
+    @include border-radius-high;
     @include mobile-responsive {
         background-color: white;
         padding: 20px 0px;

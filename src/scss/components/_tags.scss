@@ -21,7 +21,7 @@
         font-weight: map-get($font-weight, regular);
         padding: 0px 15px;
 
-        @include rounded-corner-mid;
+        @include border-radius-mid;
 
         @include mobile-responsive {
             height: 18px;
