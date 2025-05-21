@@ -4,25 +4,29 @@ import Arrow from "../../assets/forward_arrow.svg";
 function Carousel({ slides }) {
   const length = slides.length;
 
-  // On duplique la dernière image au début et la première à la fin
+  // Création d'un tableau d'images ou on ajoute la dernière image au début et la première à la fin
+  // pour permettre de faire défiler les images en boucle
   const extendedSlides = [slides[length - 1], ...slides, slides[0]];
 
   // On commence à l'index 1 (première vraie image)
   const [currentSlide, setCurrentSlide] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  // Vérifie si une transition CSS est en cours
+  const [transition, setTransition] = useState(false);
+  // Référence pour le conteneur des images
   const containerRef = useRef(null);
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
-    setIsTransitioning(true);
+    setTransition(true);
   };
 
-  const previousSlide = () => !isTransitioning && goToSlide(currentSlide - 1);
-  const nextSlide = () => !isTransitioning && goToSlide(currentSlide + 1);
+  const previousSlide = () => !transition && goToSlide(currentSlide - 1);
+  const nextSlide = () => !transition && goToSlide(currentSlide + 1);
 
   // Quand la transition se termine, on saute sans animation sur la vraie première / dernière image
-  const handleTransitionEnd = () => {
-    setIsTransitioning(false);
+  const endTransition = () => {
+    setTransition(false);
+    // Si on est sur la slide dupliquée au début, On saute à la vraie dernière slide
     if (currentSlide === 0) {
       setCurrentSlide(length);
       containerRef.current.style.transition = "none";
@@ -30,6 +34,7 @@ function Carousel({ slides }) {
       setTimeout(() => {
         containerRef.current.style.transition = "";
       }, 20);
+      // Si on est sur la slide dupliquée à la fin, On saute à la vraie première slide
     } else if (currentSlide === length + 1) {
       setCurrentSlide(1);
       containerRef.current.style.transition = "none";
@@ -40,29 +45,30 @@ function Carousel({ slides }) {
     }
   };
 
-  // Met à jour le style à chaque changement de slide
+  // Met à jour le style à chaque changement de slide pour déplacer le conteneur et applique une transition
   React.useEffect(() => {
     if (containerRef.current) {
       containerRef.current.style.transform = `translateX(${
         -currentSlide * 100
       }%)`;
-      if (isTransitioning) {
+      if (transition) {
         containerRef.current.style.transition = "transform 0.5s";
       }
     }
-  }, [currentSlide, isTransitioning]);
+  }, [currentSlide, transition]);
 
   return (
     <div className="carousel">
       <div
         className="carousel__container"
         ref={containerRef}
-        onTransitionEnd={handleTransitionEnd}
+        onTransitionEnd={endTransition}
         style={{
           width: `${extendedSlides.length * 100}%`,
           display: "flex",
         }}
       >
+        {/* On affiche chaque image dans une balise img */}
         {extendedSlides.map((slide, index) => (
           <img
             className="carousel__container--pictures"
@@ -73,6 +79,7 @@ function Carousel({ slides }) {
           />
         ))}
       </div>
+      {/* Si il y a plus d'une image, on affiche les flèches */}
       {length > 1 && (
         <div className="carousel__arrows">
           <button className="carousel__arrows--buttons" onClick={previousSlide}>
