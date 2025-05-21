@@ -1,11 +1,7 @@
-//Import Components
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-
-//Import image
 import aboutBanner from '../../assets/banner_aboutkasa.png'
 
-//Import Data
 const values = [
   {
     title: 'Fiabilité',
@@ -25,7 +21,7 @@ const values = [
   },
 ]
 
-function AboutKasa() {
+function About() {
   return (
     <div>
       <Banner
@@ -47,4 +43,4 @@ function AboutKasa() {
   )
 }
 
-export default AboutKasa
+export default About
