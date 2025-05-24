@@ -20,8 +20,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/logement/:rentalId" element={<Rental />} />
           <Route path="/a-propos" element={<About />} />
-          <Route path="/adresse-introuvable" element={<Error />} />
-          <Route path="*" element={<Navigate to="/adresse-introuvable" replace />}
+          <Route path="/404" element={<Error />} />
+          <Route path="*" element={<Navigate to="/404" replace />}
           />
         </Routes>
       </main>
